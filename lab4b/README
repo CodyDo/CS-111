@@ -1,0 +1,23 @@
+NAME: Cody Do
+EMAIL: D.Codyx@gmail.com
+ID: 105140467
+
+Project 4B - Sensors Input
+CS 111 Winter 2021 - Xu
+
+lab4b.c: C source file that contains code for a program that builds and runs on
+    Beaglebone Green Wireless. It gathers temperature readings from its sensor
+    and outputs them to stdout. Has options available to change the frequency of
+    readings, the temperature scale, and whether to log readings or not.
+
+Makefile: Supports 4 targets. Intended to be run on imbedded system (Beaglebone)
+    default: Compiles the program from the lab4b.c source code
+    check: Runs a smoke test of the application
+    clean: Deletes all files created by the Makefile
+    dist: Produces tarball used for submission
+
+README: Description of files
+
+Resources: Two links to learn the functionality of isdigit and gettimeofday.
+    https://www.cplusplus.com/reference/cctype/isdigit/
+    https://man7.org/linux/man-pages/man2/gettimeofday.2.html

@@ -1,0 +1,30 @@
+NAME: Megan Pham, Cody Do
+EMAIL: megspham@ucla.edu, D.Codyx@gmail.com
+ID: 505313300, 105140467
+
+Project 3B - File System Analysis
+CS 111 Winter 2021 - Xu
+
+In this project, we will analyze the summaries and detect errors and inconsistencies from
+part A. 
+    -Primary: reinforce the basic file system concepts of directory objects, file objects, 
+    and free space.
+    -Primary: reinforce the implemenation descriptions provided in the text and lectures.
+    -Primary: gain experience examining, interpreting and processing information in complex 
+    binary data structures.
+    -Primary: reinforce the notions of consistency and integrity and apply them to a concrete 
+    and non-trivial problem.
+
+
+Deliverables:
+    lab3b.py:
+        Python source code for a program that reads a csv file and checks for
+        any inconsistencies. Any such inconsistencies are then reported.
+
+    Makefile: Supports 3 targets
+        default: Compiles the program from python source code
+        clean: Deletes all files created by the Makefile
+        dist: Produces tarball used for submission
+
+    README:
+        Description of files

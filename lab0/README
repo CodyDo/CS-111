@@ -1,0 +1,58 @@
+NAME: Cody Do
+EMAIL: D.Codyx@gmail.com
+ID: 105140467
+
+lab0.c: This is the source c code for a program that reads from file
+descriptor 0 and writes to file descriptor 1. This means it reads from
+standard input and writes to standard output unless options are provided
+to change it. The following four options are available:
+    --input: Changes file descriptor 1 from standard input to a file
+    --output: Changes file descriptor 2 from standard output to a file
+    --segfault: Forces a segmentation fault by accessing a NULL pointer
+    --catch: Registers a custom SIGSEGV handler that outputs a custom message 
+        to standard error.
+
+Makefile: A file that builds the lab0 program and supports four targets:
+    default: Runs gcc to create a lab0 executable from the lab0.c source code
+    check: Runs a set of smoketests to check the integrity of the program.
+           If there is no output, then all tests have passed.
+    clean: Deletes all files created from Makefile 
+    dist: Produces the tarbell for submission
+
+backtrace.png: A screenshot of running lab0 in gdb with the --segfault
+option given. When the segmentation fault occurs, a stack backtrace is
+requested. All commands are seen on the image.
+
+breakpoint.png: A screenshot of running lab0 in gdb with the --segfault
+option given. However, a breakpoint is set up prior to accessing the 
+"destructo" pointer. The "destructo" pointer is shown to be NULL (0x0)
+in the image.
+
+Tests (located in Makefile):
+    basicTest: This test runs lab0 with an --input file and an --output file.
+    It is assumed that the output file (named testoutput.txt) does not exist
+    and will thus need to be created. Checks that it exits with code 0.
+
+    stdIOTest: This test provides a sample string through stdin and checks
+    that lab0 was able to process it and exit with code 0.
+
+    compIOTest: This test is identical to basicTest in terms of the input/output
+    options. However, it instead checks that the input file and the output
+    file match.
+
+    badOptTest: Runs lab0 with an invalid long option (badOption) and makes
+    sure that lab0 exits with code 1.
+
+    badInputTest: Runs lab0 on an input file that doesn't exist and makes
+    sure that it exits with code 2.
+
+    badOutputTest: Runs lab0 on an output file that doesn't have write
+    permission and makes sure that it exits with code 3.
+
+    segFaultTest: Runs lab0 with --segfault to check that it returns error
+    code 139. This was found at:
+    https://stackoverflow.com/questions/13689061/segmentation-fault-process-returned-139-0x8b
+
+    catchTest: runs lab0 with --catch and --segfault to check that the
+    default SIGSEGV handler is replaced with the custom one, exiting with
+    code 4.

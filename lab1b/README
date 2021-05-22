@@ -1,0 +1,32 @@
+NAME: Cody Do
+EMAIL: D.Codyx@gmail.com
+ID: 105140467
+
+lab1b-server.c: The source file that contains code which handles the server
+aspect of lab1b. It forks a shell process and sends data from the shell to
+the client, as well as data from the client to the shell. Server-client
+communication is done through a socket. It supports compression through the
+use of the zlib library.
+
+lab1b-client.c: The source file that contains code which handles the client
+aspcet of lab1b. It sends input from the client keyboard to the server through
+a socket, and displays any received data from the server via the same socket.
+It supports logging data sent/received as well as compression through the use
+of the zlib library.
+
+Makefile: Builds lab1b executable and supports 5 options:
+    default: Runs gcc to create a lab1b-server and lab1b-client executable
+            from the lab1b-server and lab1b-client source code respectively.
+            Utilizes the -lz option to allow zlib usage.
+    server: Runs gcc to create a lab1b-server executable. Utilizes the -lz 
+            option to allow zlib usage.
+    client: Runs gcc to create a lab1b-client executable. Utilizes the -lz 
+            option to allow zlib usage.
+    clean: Deletes all files created from Makefile 
+    dist: Produces the tarbell for submission
+
+Resources: The following two links were used to help me better understand
+how to use gethostnameby() and find a print function that could write to 
+a buffer:
+    https://man7.org/linux/man-pages/man3/gethostbyname.3.html
+    https://linux.die.net/man/3/snprintf

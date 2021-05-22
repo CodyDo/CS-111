@@ -1,0 +1,30 @@
+NAME: Cody Do
+EMAIL: D.Codyx@gmail.com
+ID: 105140467
+
+Project 4A - Beaglebone Bring-up
+CS 111 Winter 2021 - Xu
+
+Serial Number: BBGW20080496
+WiFi MAC Address: 2CF7F106C5EF
+
+my_beaglebone.jpg: Selfie of me holding the assembled Beaglebone
+
+connected.png: Screenshot from USB session to Beaglebone. Showing the
+    name I gave it and that I configured network access.
+
+copy.png: Screenshot showing the sucessful copying of a program from my
+    local computer to the Beaglebone. Connected via wifi IP after using scp
+    to show wifi as a valid form of connection.
+
+build_run.png: Screenshot that shows the successful building and running
+    of a trivial program which outputs "Hello world."
+
+git.png: Screenshot that shows the successful downloading of git version
+    control onto the Beaglebone and the subsequent cloning of a repository
+    onto the Beaglebone
+
+Makefile: Supports one target
+    dist: Produces tarbell used for submission
+
+README: Description of files

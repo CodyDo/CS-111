@@ -1,0 +1,25 @@
+NAME: Cody Do
+EMAIL: D.Codyx@gmail.com
+ID: 105140467
+
+Project 4C - Internet of Things Security
+CS 111 Winter 2021 - Xu
+
+lab4c_tcp.c: C source file that contains code for a program that builds and runs on
+    Beaglebone Green Wireless. It sets up a TCP connection in order to read input
+    from a server and write output back. In this case, the input and output are
+    based on the program from lab 4b, where the Beaglebone gathers temperature 
+    readings from its sensor. In addition to the functionality from lab4b, it
+    now supports two more mandatory options: --host and --id. The --log option
+    is now mandatory as well.
+
+lab4c_tls: Based on the same code described in lab4c_tcp.c above. It sets up a
+    secure TLS connection to the server at a specified address and port. 
+
+Makefile: Supports 3 targets. Intended to be run on imbedded system (Beaglebone)
+    default: Compiles lab4c_tcp and lab4c_tls from the lab4c_tcp.c and 
+             lab4c_tls.c source codes respectively
+    clean: Deletes all files created by the Makefile
+    dist: Produces tarball used for submission
+
+README: Description of files
